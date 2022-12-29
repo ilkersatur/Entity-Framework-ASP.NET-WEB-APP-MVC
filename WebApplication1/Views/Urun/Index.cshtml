@@ -1,0 +1,19 @@
+﻿@model IEnumerable<WebApplication1.Models.Urun>
+@{
+    ViewBag.Title = "Index";
+}
+@Html.ActionLink("Yeni Ürün Ekle", "UrunEkle")
+<br />
+<h2>Tüm Ürünler</h2>
+<table border="1px">
+    @foreach (var urun in Model)
+    {
+        <tr>
+            <td>@urun.UrunID</td>
+            <td>@urun.UrunAdi</td>
+            @*<td>@urun.KategoriID</td>*@
+            <td>@urun.Kategori.KategoriAdi</td>
+            <td>@urun.Fiyat</td>
+        </tr>
+    }
+</table>

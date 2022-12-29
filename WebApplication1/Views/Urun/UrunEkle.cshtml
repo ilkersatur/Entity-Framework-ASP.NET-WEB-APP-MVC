@@ -1,0 +1,28 @@
+﻿@model WebApplication1.Models.Urun 
+@{
+    ViewBag.Title = "UrunEkle";
+}
+
+<br />
+<h2>UrunEkle</h2>
+
+<form action="~/Urun/UrunEkle" method="post">
+    <table>
+        <tr>
+            <td>Urun Adı</td>
+            <td>@Html.TextBoxFor(u => u.UrunAdi)</td>
+        </tr>
+        <tr>
+            <td> Kategori</td>
+            <td>@Html.TextBoxFor(u => u.KategoriID)</td>
+        </tr>
+        <tr>
+            <td>Fiyat</td>
+            <td>@Html.TextBoxFor(u => u.Fiyat)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Kaydet"></td>
+        </tr>
+    </table>
+</form>
